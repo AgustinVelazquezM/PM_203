@@ -1,7 +1,4 @@
-// ====================
-// COCINA
-// Catálogo de productos
-// ====================
+
 
 const catalogo = [
 

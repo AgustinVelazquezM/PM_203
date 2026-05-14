@@ -1,7 +1,4 @@
-// ====================
-// CLIENTE
-// Mostrar menú
-// ====================
+
 
 function mostrarMenu() {
 
@@ -30,7 +27,6 @@ function mostrarMenu() {
 }
 
 
-// Mostrar pedidos en pantalla
 function actualizarPantalla() {
 
     const lista = document.getElementById("listaPedidos");

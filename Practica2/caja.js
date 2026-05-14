@@ -1,15 +1,11 @@
-// ====================
-// CAJA
-// ====================
 
-// Lista de pedidos
 let pedidos = [];
 
-// Total acumulado
+
 let totalAcumulado = 0;
 
 
-// Agregar pedido
+
 function agregarPedido(nombre, precio) {
 
     const pedido = {
@@ -24,8 +20,6 @@ function agregarPedido(nombre, precio) {
     actualizarPantalla();
 }
 
-
-// Eliminar pedido
 function eliminarPedido(index) {
 
     totalAcumulado -= pedidos[index].precio;
