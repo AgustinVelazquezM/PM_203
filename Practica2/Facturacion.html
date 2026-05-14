@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cafetería los mochis</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        #menu {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .producto {
+            background-color: white;
+            width: 180px;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #caba45;
+            color: white;
+        }
+
+        ul {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            margin: auto;
+        }
+
+    </style>
+
+</head>
+
+<body onload="mostrarMenu()">
+
+    <h1>Cafetería los mochis</h1>
+
+    <h2>Menú</h2>
+
+    <div id="menu"></div>
+
+    <!-- CAJA -->
+    <h2>Pedidos</h2>
+
+    <ul id="listaPedidos"></ul>
+
+    <h2 id="total">
+        Total: $0
+    </h2>
+
+
+    <script src="cocina.js"></script>
+    <script src="caja.js"></script>
+    <script src="cliente.js"></script>
+
+</body>
+
+</html>
