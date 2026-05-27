@@ -19,10 +19,7 @@ const promociones = [
 
 // CALLBACK
 
-function notificarPedido(
-    mensaje,
-    callback
-) {
+function notificarPedido(mensaje,callback) {
 
     callback(mensaje);
 }
