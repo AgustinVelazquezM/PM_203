@@ -1,6 +1,4 @@
-
 let pedidos = [];
-
 
 let totalAcumulado = 0;
 
@@ -17,10 +15,21 @@ function agregarPedido(nombre, precio) {
 
     totalAcumulado += precio;
 
+    console.log("Pedido agregado:");
+    console.log(pedido);
+
+    console.log("Lista de pedidos:");
+    console.log(pedidos);
+
     actualizarPantalla();
 }
 
+
+
 function eliminarPedido(index) {
+
+    console.log("Pedido eliminado:");
+    console.log(pedidos[index]);
 
     totalAcumulado -= pedidos[index].precio;
 

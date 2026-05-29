@@ -1,8 +1,8 @@
-
-
 function mostrarMenu() {
 
     const menu = document.getElementById("menu");
+
+    menu.innerHTML = "";
 
     for(let i = 0; i < catalogo.length; i++) {
 
@@ -14,17 +14,42 @@ function mostrarMenu() {
 
             <p>Precio: $${catalogo[i].precio}</p>
 
-            <button onclick="agregarPedido(
-                '${catalogo[i].nombre}',
-                ${catalogo[i].precio}
-            )">
-                Agregar
-            </button>
+            <p>
+                Promoción:
+                ${catalogo[i].promocion}
+            </p>
+
+            <p>
+                Disponibilidad:
+                ${catalogo[i].disponible ? "Disponible" : "Agotado"}
+            </p>
+
+            ${
+                catalogo[i].disponible
+                ?
+                `
+                <button onclick="agregarPedido(
+                    '${catalogo[i].nombre}',
+                    ${catalogo[i].precio}
+                )">
+                    Agregar
+                </button>
+                `
+                :
+                `
+                <button disabled>
+                    Agotado
+                </button>
+                `
+            }
 
         </div>
         `;
     }
+
+    console.log("Menú mostrado correctamente");
 }
+
 
 
 function actualizarPantalla() {
@@ -51,4 +76,6 @@ function actualizarPantalla() {
 
     document.getElementById("total").innerHTML =
     "Total: $" + totalAcumulado;
+
+    console.log("Pantalla actualizada");
 }
