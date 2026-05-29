@@ -7,6 +7,7 @@ function mostrarMenu() {
     for(let i = 0; i < catalogo.length; i++) {
 
         menu.innerHTML +=
+
         `
         <div class="producto">
 
@@ -14,40 +15,18 @@ function mostrarMenu() {
 
             <p>Precio: $${catalogo[i].precio}</p>
 
-            <p>
-                Promoción:
-                ${catalogo[i].promocion}
-            </p>
+            <button onclick="agregarPedido(
+                '${catalogo[i].nombre}',
+                ${catalogo[i].precio}
+            )">
 
-            <p>
-                Disponibilidad:
-                ${catalogo[i].disponible ? "Disponible" : "Agotado"}
-            </p>
+                Agregar
 
-            ${
-                catalogo[i].disponible
-                ?
-                `
-                <button onclick="agregarPedido(
-                    '${catalogo[i].nombre}',
-                    ${catalogo[i].precio}
-                )">
-                    Agregar
-                </button>
-                `
-                :
-                `
-                <button disabled>
-                    Agotado
-                </button>
-                `
-            }
+            </button>
 
         </div>
         `;
     }
-
-    console.log("Menú mostrado correctamente");
 }
 
 
@@ -61,13 +40,16 @@ function actualizarPantalla() {
     for(let i = 0; i < pedidos.length; i++) {
 
         lista.innerHTML +=
+
         `
         <li>
 
             ${pedidos[i].nombre} - $${pedidos[i].precio}
 
             <button onclick="eliminarPedido(${i})">
+
                 Eliminar
+
             </button>
 
         </li>
@@ -75,7 +57,40 @@ function actualizarPantalla() {
     }
 
     document.getElementById("total").innerHTML =
-    "Total: $" + totalAcumulado;
 
-    console.log("Pantalla actualizada");
+    "Total: $" + totalAcumulado;
+}
+
+
+
+function actualizarEstado(estado) {
+
+    const estadoPedido = document.getElementById("estadoPedido");
+
+    estadoPedido.innerHTML = estado;
+
+    console.log(estado);
+
+    if(estado === "Pedido recibido") {
+
+        setTimeout(() => {
+
+            estadoPedido.innerHTML = "Preparando pedido";
+
+            console.log("Preparando pedido");
+
+        }, 1000);
+    }
+
+    if(estado === "Preparando pedido") {
+
+        setTimeout(() => {
+
+            estadoPedido.innerHTML = "Empacando pedido";
+
+            console.log("Empacando pedido");
+
+        }, 2000);
+    }
+
 }

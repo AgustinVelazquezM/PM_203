@@ -2,69 +2,49 @@ const catalogo = [
 
     {
         nombre: "Café",
-        precio: 40,
-        disponible: true,
-        promocion: "2x1"
+        precio: 40
     },
 
     {
         nombre: "Té",
-        precio: 35,
-        disponible: true,
-        promocion: "Sin promoción"
+        precio: 35
     },
 
     {
         nombre: "Sandwich",
-        precio: 65,
-        disponible: true,
-        promocion: "Combo"
+        precio: 65
     },
 
     {
         nombre: "Pastel",
-        precio: 50,
-        disponible: false,
-        promocion: "15% OFF"
+        precio: 50
     }
 
 ];
 
 
 
-function mostrarCatalogo() {
+function prepararPedido(producto) {
 
-    console.log("CATÁLOGO ACTUAL");
-    console.log(catalogo);
-}
+    console.log("Preparando pedido...");
 
+    return new Promise((resolve, reject) => {
 
+        setTimeout(() => {
 
-function agregarProducto(nombre, precio, disponible, promocion) {
+            let exito = Math.random();
 
-    const producto = {
-        nombre: nombre,
-        precio: precio,
-        disponible: disponible,
-        promocion: promocion
-    };
+            if(exito > 0.3) {
 
-    catalogo.push(producto);
+                resolve(producto);
 
-    console.log("Producto agregado:");
-    console.log(producto);
+            } else {
 
-    mostrarMenu();
-}
+                reject(producto);
+            }
 
+        }, 3000);
 
+    });
 
-function eliminarProducto(index) {
-
-    console.log("Producto eliminado:");
-    console.log(catalogo[index]);
-
-    catalogo.splice(index, 1);
-
-    mostrarMenu();
 }
