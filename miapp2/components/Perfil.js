@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { View, Text, Button, StyleSheet } from "react-native";
 
-export const Perfil = ({ nombre, carrera, materia, cuatrimestre }) => {
+export const Perfil = ({ nombre, carrera, materia, cuatrimestre, estiloExt }) => {
   const [mostrar, setMostrar] = useState(false);
 
   return (
-    <View style={styles.tarjeta}>
+    <View style={[styles.tarjeta,estiloExt]}>
+
       <Text style={styles.nombre}>{nombre}</Text>
 
       {mostrar && (
@@ -45,4 +46,5 @@ const styles = StyleSheet.create({
     padding: 25,
     margin: 15,
   },
+ 
 });
