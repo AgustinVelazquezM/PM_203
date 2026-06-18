@@ -1,12 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
-import MenuScreen from './screens/MenuScreen';
+import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
+export default function SafeAreaScreen() {
   return (
     <View style={styles.container}>
 
-      <MenuScreen></MenuScreen>
+        <text> aqui va la practica</text> 
+
       <StatusBar style="auto" />
 
     </View>
@@ -16,7 +16,9 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    marginTop: 300,
+    margin: 300,
+    backgroundColor: '#c4baba',
     alignItems: 'center',
     justifyContent: 'space-around',
     flexDirection: 'column',
