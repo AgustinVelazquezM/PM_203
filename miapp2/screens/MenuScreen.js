@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Button} from 'react-native';
 import React,{useState} from 'react';
 import TarjetaScreen from './TarjetaScreen';
 import SafeAreaScreen from './SafeAreaScreen';
+import PressableScreen from './PressableScreen';
 
 
 export default function MenuScreen() {
@@ -14,6 +15,8 @@ export default function MenuScreen() {
         return <TarjetaScreen/>
       case 'safearea':
         return <SafeAreaScreen/>
+      case 'pressable':
+        return <PressableScreen/>
 
       case 'menu':
         default:
@@ -23,10 +26,6 @@ export default function MenuScreen() {
              <text>Menu de practicas: </text>
 
              <Button onPress={()=>setScreen('tarjetas')} title="Practica tarjetas" color="#FF6B6B"/>
-                container: {
-                    flex: 1,
-    backgroundColor: '#bdb1b1',
-    marginTop: 60,
 
              <Button onPress={()=>setScreen('safearea')} title="Practica SafeAreaview" color="#0a9e0a"/>
 
