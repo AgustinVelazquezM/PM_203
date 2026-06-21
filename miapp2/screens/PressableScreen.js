@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Switch, Pressable, Alert } from 'react-native';
 export default function App() {
   // 1. MANEJO DE STATE (Estado para el Modo Oscuro)
   const [isDarkMode, setIsDarkMode] = useState(false);
-
+  
   // Función que alterna el Switch
   const toggleSwitch = () => setIsDarkMode(previousState => !previousState);
 
@@ -87,4 +87,4 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   },
-});
+});  

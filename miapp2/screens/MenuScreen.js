@@ -4,6 +4,7 @@ import React,{useState} from 'react';
 import TarjetaScreen from './TarjetaScreen';
 import SafeAreaScreen from './SafeAreaScreen';
 import PressableScreen from './PressableScreen';
+import ActivityIndicatorScreen from './ActivityIndicatorScreen';
 
 
 export default function MenuScreen() {
@@ -18,6 +19,9 @@ export default function MenuScreen() {
       case 'pressable':
         return <PressableScreen/>
 
+      case 'activityindicator':
+        return <ActivityIndicatorScreen/>
+
       case 'menu':
         default:
         return (
@@ -31,15 +35,15 @@ export default function MenuScreen() {
 
              <Button onPress={()=>setScreen('pressable')} title="Practica Pressable " color="#0a7c9e"/>
 
-             <Button onPress={()=>setScreen('Textinput')} title="Practica Textinput" color="#e2eb33"/>
+             <Button onPress={()=>setScreen('textinput')} title="Practica Textinput" color="#e2eb33"/>
 
-             <Button onPress={()=>setScreen('Flatlist')} title="Practica Flatlist" color="#d99619"/>
+             <Button onPress={()=>setScreen('flatlist')} title="Practica Flatlist" color="#d99619"/>
 
-             <Button onPress={()=>setScreen('ImagenBackground')} title="Practica ImagenBackground" color="#db3ba6"/>
+             <Button onPress={()=>setScreen('imagenBackground')} title="Practica ImagenBackground" color="#db3ba6"/>
 
-             <Button onPress={()=>setScreen('Activityindicator')} title="Practica ActivityIndicator" color="#de4014"/>
+             <Button onPress={()=>setScreen('activityindicator')} title="Practica ActivityIndicator" color="#de4014"/>
 
-             <Button onPress={()=>setScreen('Modal')} title="Practica Modal" color="#46efb1"/>
+             <Button onPress={()=>setScreen('modal')} title="Practica Modal" color="#46efb1"/>
 
 
 
