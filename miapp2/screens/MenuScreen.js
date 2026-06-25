@@ -5,6 +5,7 @@ import TarjetaScreen from './TarjetaScreen';
 import SafeAreaScreen from './SafeAreaScreen';
 import PressableScreen from './PressableScreen';
 import ActivityIndicatorScreen from './ActivityIndicatorScreen';
+import TextInputScreen from './TextInputScreen';
 
 
 export default function MenuScreen() {
@@ -22,6 +23,9 @@ export default function MenuScreen() {
       case 'activityindicator':
         return <ActivityIndicatorScreen/>
 
+      case 'textinput':
+        return<TextInputScreen/>
+
       case 'menu':
         default:
         return (
@@ -35,7 +39,7 @@ export default function MenuScreen() {
 
              <Button onPress={()=>setScreen('pressable')} title="Practica Pressable " color="#0a7c9e"/>
 
-             <Button onPress={()=>setScreen('textinput')} title="Practica Textinput" color="#e2eb33"/>
+             <Button onPress={()=>setScreen('textinput')} title="Practica TextInput" color="#e2eb33"/>
 
              <Button onPress={()=>setScreen('flatlist')} title="Practica Flatlist" color="#d99619"/>
 
