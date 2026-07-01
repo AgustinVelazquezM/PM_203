@@ -6,6 +6,8 @@ import SafeAreaScreen from './SafeAreaScreen';
 import PressableScreen from './PressableScreen';
 import ActivityIndicatorScreen from './ActivityIndicatorScreen';
 import TextInputScreen from './TextInputScreen';
+import ImagenBackgroundScreen from './ImagenBackgroundScreen';
+import FlatListScreen from './FlatListScreen';
 
 
 export default function MenuScreen() {
@@ -26,12 +28,15 @@ export default function MenuScreen() {
       case 'textinput':
         return<TextInputScreen/>
 
+      case 'flatlist':
+         return<FlatListScreen/>
+
       case 'menu':
         default:
         return (
           <View style={styles.container}>
 
-             <text>Menu de practicas: </text>
+             <Text>Menu de practicas: </Text>
 
              <Button onPress={()=>setScreen('tarjetas')} title="Practica tarjetas" color="#FF6B6B"/>
 
@@ -43,7 +48,7 @@ export default function MenuScreen() {
 
              <Button onPress={()=>setScreen('flatlist')} title="Practica Flatlist" color="#d99619"/>
 
-             <Button onPress={()=>setScreen('imagenBackground')} title="Practica ImagenBackground" color="#db3ba6"/>
+             <Button onPress={()=>setScreen('imagenbackground')} title="Practica ImagenBackground" color="#db3ba6"/>
 
              <Button onPress={()=>setScreen('activityindicator')} title="Practica ActivityIndicator" color="#de4014"/>
 
