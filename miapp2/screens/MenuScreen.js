@@ -31,6 +31,9 @@ export default function MenuScreen() {
       case 'flatlist':
          return<FlatListScreen/>
 
+      case 'imagenbackground':
+        return<ImagenBackgroundScreen/>
+
       case 'menu':
         default:
         return (
