@@ -8,6 +8,7 @@ import ActivityIndicatorScreen from './ActivityIndicatorScreen';
 import TextInputScreen from './TextInputScreen';
 import ImagenBackgroundScreen from './ImagenBackgroundScreen';
 import FlatListScreen from './FlatListScreen';
+import ModalScreen from './ModalScreen';
 
 
 export default function MenuScreen() {
@@ -33,6 +34,9 @@ export default function MenuScreen() {
 
       case 'imagenbackground':
         return<ImagenBackgroundScreen/>
+      
+      case 'modalscreen':
+        return<ModalScreen/>
 
       case 'menu':
         default:
@@ -55,7 +59,7 @@ export default function MenuScreen() {
 
              <Button onPress={()=>setScreen('activityindicator')} title="Practica ActivityIndicator" color="#de4014"/>
 
-             <Button onPress={()=>setScreen('modal')} title="Practica Modal" color="#46efb1"/>
+             <Button onPress={()=>setScreen('modalscreen')} title="Practica Modal" color="#46efb1"/>
 
 
 
@@ -69,9 +73,9 @@ export default function MenuScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#bdb1b1',
-    marginTop: 60,
-    margin: 60,
+    backgroundColor: '#38a6cb',
+    marginTop: 80,
+    margin: 80,
     alignItems: 'center',
     justifyContent: 'space-evenly',
     flexDirection: 'column',
