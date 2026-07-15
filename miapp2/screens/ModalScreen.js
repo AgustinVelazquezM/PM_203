@@ -1,12 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import {
-    Animated,
-    Modal,
-    Pressable,
-    StyleSheet,
-    Text,
-    View,
+import {Animated,Modal,Pressable,StyleSheet,Text,View,
 } from 'react-native';
 
 export default function ModalScreen() {
@@ -107,13 +101,7 @@ export default function ModalScreen() {
     );
 }
 
-function BottomSheet({
-    visible,
-    onClose,
-    title,
-    height = 320,
-    closeOnBackdropPress = true,
-    children,
+function BottomSheet({  visible,onClose,title, height = 320,closeOnBackdropPress = true,children,
 }) {
     const translateY = useRef(new Animated.Value(height)).current;
 
